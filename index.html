@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <title>Kasztandor's paint</title>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16"> 
     </head>
     <body>
         <div id="panel">
@@ -11,7 +12,9 @@
             <div id="rubber" class="tool" onclick="select(1)"><img src="icons/rubber.png"/></div>
             <div id="fill" class="tool" onclick="select(2)"><img src="icons/fill.png"/></div>
         </div>
-        <canvas></canvas>
+        <div id="paint">
+            <canvas width="1600" height="800"></canvas>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>

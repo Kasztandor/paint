@@ -3,6 +3,9 @@ body{
     padding: 0;
 }
 #panel{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 60px;
     border-right: 1px solid black;
@@ -20,4 +23,16 @@ body{
 }
 .tool:hover, .selected{
     background-color: gray;
+}
+#paint{
+    position: absolute;
+    top: 0;
+    left: 61px;
+    width: calc(100% - 61px);
+    height: 100%;
+    overflow: auto;
+}
+canvas{
+    background-color: white;
+    border: 1px solid black;
 }
