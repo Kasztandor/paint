@@ -1,6 +1,13 @@
+:root{
+    --size: 20px;
+    --posX: 0px;
+    --posY: 0px;
+    --selected-color: #000000;
+}
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 #panel{
     position: absolute;
@@ -9,6 +16,7 @@ body{
     height: 100%;
     width: 60px;
     border-right: 1px solid black;
+    text-align: center;
 }
 .tool{
     padding: 5px;
@@ -21,8 +29,20 @@ body{
     width: 100%;
     height: 100%;
 }
+.tool:hover{
+    cursor: pointer;
+}
 .tool:hover, .selected{
     background-color: gray;
+}
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* Chromium */
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+    display: inline-block;
 }
 #paint{
     position: absolute;
@@ -35,4 +55,33 @@ body{
 canvas{
     background-color: white;
     border: 1px solid black;
+}
+
+#helper{
+    position: absolute;
+    top: var(--posY);
+    left: var(--posX);
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid black;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.color{
+    width: 26px;
+    height: 26px;
+    margin: 1px;
+    border: 1px solid black;
+    float: left;
+}
+.color:hover{
+    cursor: pointer;
+}
+#selectedColor{
+    width: 56px;
+    height: 56px;
+    margin: 1px;
+    border: 1px solid black;
+    background-color: var(--selected-color);
 }
